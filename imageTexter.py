@@ -6,7 +6,7 @@ from math import sqrt
 imag = Image.open("Image.jpg") 
 imag = imag.convert ('RGB')
 
-console_width = 287
+console_width = 287/4
 console_height = 9999
 
 # Resize Image to fit in console
