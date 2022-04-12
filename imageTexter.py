@@ -14,11 +14,14 @@ console_width = int(sys.argv[1])
 console_height = int(sys.argv[2])
 
 colour = False
+emoji = False
 repeatCount = int(sys.argv[4])
 
 
 if sys.argv[3] == "colour":
     colour = True
+elif sys.argv[3] == "emoji":
+    emoji = True
 
 # Resize Image to fit in console
 while (imag.height > console_height):
@@ -67,36 +70,70 @@ for y in range(imag.height):
                 output += "\033[1;34;40m"
 
         # Determine the Character that will be written based on brightness of pixel
-        if brightness >= 224:
-            output += AddToOutput("@")
-        elif brightness >= 208:
-            output += AddToOutput("&")
-        elif brightness >= 192:
-            output += AddToOutput("B")
-        elif brightness >= 176:
-            output += AddToOutput("G")
-        elif brightness >= 160:
-            output += AddToOutput("O")
-        elif brightness >= 144:
-            output += AddToOutput("U")
-        elif brightness >= 128:
-            output += AddToOutput("#")
-        elif brightness >= 112:
-            output += AddToOutput("o")
-        elif brightness >= 96:
-            output += AddToOutput("e")
-        elif brightness >= 80:
-            output += AddToOutput("+")
-        elif brightness >= 64:
-            output += AddToOutput("-")
-        elif brightness >= 48:
-            output += AddToOutput(";")
-        elif brightness >= 32:
-            output += AddToOutput(",")
-        elif brightness >= 16:
-            output += AddToOutput(".")
-        else:
-            output += AddToOutput(" ")
+        if emoji == True:
+            if brightness >= 224:
+                output += AddToOutput("🏐")
+            elif brightness >= 208:
+                output += AddToOutput("📰")
+            elif brightness >= 192:
+                output += AddToOutput("📖")
+            elif brightness >= 176:
+                output += AddToOutput("📋")
+            elif brightness >= 160:
+                output += AddToOutput("☕")
+            elif brightness >= 144:
+                output += AddToOutput("🎳")
+            elif brightness >= 128:
+                output += AddToOutput("🥌")
+            elif brightness >= 112:
+                output += AddToOutput("💾")
+            elif brightness >= 96:
+                output += AddToOutput("🗿")
+            elif brightness >= 80:
+                output += AddToOutput("💿")
+            elif brightness >= 64:
+                output += AddToOutput("📓")
+            elif brightness >= 48:
+                output += AddToOutput("📺")
+            elif brightness >= 32:
+                output += AddToOutput("🎓")
+            elif brightness >= 16:
+                output += AddToOutput("🎥")
+            else:
+                output += AddToOutput("💣")
+        else
+            if brightness >= 224:
+                output += AddToOutput("@")
+            elif brightness >= 208:
+                output += AddToOutput("&")
+            elif brightness >= 192:
+                output += AddToOutput("B")
+            elif brightness >= 176:
+                output += AddToOutput("G")
+            elif brightness >= 160:
+                output += AddToOutput("O")
+            elif brightness >= 144:
+                output += AddToOutput("U")
+            elif brightness >= 128:
+                output += AddToOutput("#")
+            elif brightness >= 112:
+                output += AddToOutput("o")
+            elif brightness >= 96:
+                output += AddToOutput("e")
+            elif brightness >= 80:
+                output += AddToOutput("+")
+            elif brightness >= 64:
+                output += AddToOutput("-")
+            elif brightness >= 48:
+                output += AddToOutput(";")
+            elif brightness >= 32:
+                output += AddToOutput(",")
+            elif brightness >= 16:
+                output += AddToOutput(".")
+            else:
+                output += AddToOutput(" ")
+        
+
 
     # Print Row
     print(f"{output}")

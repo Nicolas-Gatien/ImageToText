@@ -17,7 +17,7 @@ Imagine Input            |  Screenshoted Text Output
 5. Enter how many characters wide you want the final output to be
 ```C:\Users\polar\Desktop\ImageToText>imageTexter.py 100 100```
 6. The image will be automatically scaled to fit within these dimensions, these act as barriers / wall to limit how big the final output will be. The final dimensions may be smaller but won't ever exceed the specified dimensions.
-7. If you want it to be coloured, type ```colour``` afterwards. This only works if your terminal supports python colour codes. If not, type any other word
+7. If you want it to be coloured, type ```colour``` afterwards. This only works if your terminal supports python colour codes. If you want to use emojis instead of regular characters, type ```emoji```. If not either of those, type any other word
 8. The last number determines how many times a character is typed out after it is chosen. This is to account for the fact that characters are taller than they are wide + empty space between rows. I've found 2 characters works best.
 ```C:\Users\polar\Desktop\ImageToText>imageTexter.py 100 100 black 2```
 9. Press enter and it will output the text
