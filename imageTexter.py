@@ -101,7 +101,7 @@ for y in range(imag.height):
                 output += AddToOutput("🎥")
             else:
                 output += AddToOutput("💣")
-        else
+        else:
             if brightness >= 224:
                 output += AddToOutput("@")
             elif brightness >= 208:
