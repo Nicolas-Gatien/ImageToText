@@ -17,7 +17,6 @@ colour = False
 emoji = False
 repeatCount = int(sys.argv[4])
 
-
 if sys.argv[3] == "colour":
     colour = True
 elif sys.argv[3] == "emoji":
@@ -132,11 +131,8 @@ for y in range(imag.height):
                 output += AddToOutput(".")
             else:
                 output += AddToOutput(" ")
-        
-
 
     # Print Row
     print(f"{output}")
     # Next Row
     y += 1
-
