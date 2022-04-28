@@ -71,11 +71,11 @@ for y in range(imag.height):
         # Determine the Character that will be written based on brightness of pixel
         if emoji == True:
             if brightness >= 224:
-                output += AddToOutput("🏐")
+                output += AddToOutput("📖")
             elif brightness >= 208:
                 output += AddToOutput("📰")
             elif brightness >= 192:
-                output += AddToOutput("📖")
+                output += AddToOutput("🏐")
             elif brightness >= 176:
                 output += AddToOutput("📋")
             elif brightness >= 160:
